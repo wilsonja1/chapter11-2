@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace chapter11_2
 {
@@ -20,11 +21,21 @@ namespace chapter11_2
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        DispatcherTimer timer = new DispatcherTimer();
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            timer.Tick += timer_Tick;
+            timer.Interval = TimeSpan.FromMilliseconds(50);
+            timer.Start();
+        }
+        int i = 0;
+        void timer_Tick
     }
 }

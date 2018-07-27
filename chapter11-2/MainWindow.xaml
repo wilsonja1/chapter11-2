@@ -9,5 +9,6 @@
     <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
         <TextBlock x:Name="response" FontSize="36"/>
         <TextBlock x:Name="ticker" FontSize="36"/>
+        <Button Content="Button" Width="75" Click="Button_Click"/>
     </StackPanel>
 </Window>
