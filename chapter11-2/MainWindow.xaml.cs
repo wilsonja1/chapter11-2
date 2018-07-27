@@ -25,9 +25,6 @@ namespace chapter11_2
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("You can't continue till you click ok");
-        }
+        
     }
 }
