@@ -34,8 +34,19 @@ namespace chapter11_2
             timer.Tick += timer_Tick;
             timer.Interval = TimeSpan.FromMilliseconds(50);
             timer.Start();
+            CheckHappiness();
         }
         int i = 0;
-        void timer_Tick
+        void timer_Tick(object sender, object e)
+        {
+            ticker.Text = "Tick #" + i++;
+        }
+
+        private async void CheckHappiness()
+        {
+            MessageBox.Show("Click this?");
+            response.Text = "testing";
+            timer.Stop();
+        }
     }
 }
