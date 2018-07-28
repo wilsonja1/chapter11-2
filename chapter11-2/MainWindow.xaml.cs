@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.IO;
 
 namespace chapter11_2
 {
@@ -47,6 +48,8 @@ namespace chapter11_2
             MessageBox.Show("Click this?");
             response.Text = "testing";
             timer.Stop();
+
+  
         }
     }
 }
